@@ -1,1 +1,32 @@
-<p>create-patient works!</p>
+<div class="container">
+  <div class="row">
+    <hr/>
+    <div class="create-patient-container col-md-9">
+      <form class="register-form" [formGroup]="registerForm" (ngSubmit)="register()">
+        <div class="form-label">
+          <div class="register-heading">Register Patient</div>
+          <hr/>
+          <input type="text" [formControlName]="'firstName'" class="form-control" style="margin-top: 5px" placeholder="First name">
+          <input type="text" [formControlName]="'lastName'" class="form-control" style="margin-top: 5px" placeholder="Last name">
+          <input type="text" [formControlName]="'pesel'" class="form-control" style="margin-top: 5px" placeholder="Pesel">
+          <input type="text" [formControlName]="'phoneNumber'" class="form-control" style="margin-top: 5px" placeholder="Phone number">
+          <input type="text" [formControlName]="'email'" class="form-control" style="margin-top: 5px" placeholder="E-mail">
+          <input type="text" [formControlName]="'country'" class="form-control" style="margin-top: 5px" placeholder="Country">
+          <input type="text" [formControlName]="'city'" class="form-control" style="margin-top: 5px" placeholder="City">
+          <input type="text" [formControlName]="'voivodeship'" class="form-control" style="margin-top: 5px" placeholder="Voivodeship">
+          <input type="text" [formControlName]="'zipCode'" class="form-control" style="margin-top: 5px" placeholder="Zip-code">
+          <input type="text" [formControlName]="'street'" class="form-control" style="margin-top: 5px" placeholder="Street">
+          <input type="text" [formControlName]="'flatNumber'" class="form-control" style="margin-top: 5px" placeholder="Flat-number">
+
+          <span>
+            <div style="margin-top: 5px; display: flex;" class="float-end">
+              <button (click)="register()" class="btnRegister">Register</button>
+            </div>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
