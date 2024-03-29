@@ -6,7 +6,7 @@ import {CreateTreatmentPayload} from "./create-treatment.payload";
 @Injectable({
   providedIn: 'root'
 })
-export class CreateTreatmentService {
+export class TreatmentService {
   constructor(private http: HttpClient) { }
 
   create(createTreatmentPayload: CreateTreatmentPayload): Observable<any>  {

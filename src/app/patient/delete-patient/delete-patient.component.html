@@ -1,1 +1,28 @@
-<p>delete-patient works!</p>
+<div class="container">
+  <div class="row">
+    <hr/>
+    <div class="create-patient-container col-md-9">
+      <form class="delete-form" [formGroup]="deletePatientForm" (ngSubmit)="delete()">
+        <div class="form-label">
+          <div class="delete-patient-heading">Delete Patient</div>
+          <hr/>
+          <select class="form-control" style="margin-top: 10px" [formControlName]="'patientID'">
+            <option value="" selected disabled>Select Patient</option>
+            <option *ngFor="let patient of patients" [value]="patient.patientID">{{
+              "Pesel: " + patient.pesel +  ", Fullname: " + patient.firstName + " " + patient.lastName
+              }}
+            </option>
+          </select>
+          <span>
+            <div style="margin-top: 5px; display: flex;" class="float-end">
+              <button (click)="delete()" class="btnDelete">Delete</button>
+            </div>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+

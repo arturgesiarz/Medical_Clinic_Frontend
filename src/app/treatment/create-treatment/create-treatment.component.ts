@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Router} from "@angular/router";
 import {CreateTreatmentPayload} from "../create-treatment.payload";
-import {CreateTreatmentService} from "../create-treatment.service";
+import {TreatmentService} from "../treatment.service";
 
 @Component({
   selector: 'app-create-treatment',
@@ -15,7 +15,7 @@ export class CreateTreatmentComponent implements OnInit{
   createTreatmentForm!: FormGroup;
   creatingTreatment: boolean = false;
 
-  constructor(private router: Router, private createTreatmentService: CreateTreatmentService) {
+  constructor(private router: Router, private treatmentService: TreatmentService) {
     this.createTreatmentPayload = {
       treatmentName: '',
       treatmentPrice: -1
@@ -35,7 +35,7 @@ export class CreateTreatmentComponent implements OnInit{
       setTimeout(() => {
         this.createTreatmentPayload.treatmentName = this.createTreatmentForm.get('treatmentName')?.value;
         this.createTreatmentPayload.treatmentPrice = this.createTreatmentForm.get('treatmentPrice')?.value;
-        this.createTreatmentService.create(this.createTreatmentPayload).subscribe(() => {
+        this.treatmentService.create(this.createTreatmentPayload).subscribe(() => {
         }, error => {
           if(error.status == 201){
             this.router.navigateByUrl('/');
