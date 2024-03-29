@@ -11,6 +11,10 @@ import { EditPatientComponent } from './patient/edit-patient/edit-patient.compon
 import {HttpClientModule} from "@angular/common/http";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {ReactiveFormsModule} from "@angular/forms";
+import { CreateTreatmentComponent } from './treatment/create-treatment/create-treatment.component';
+import { RemoveTreatmentComponent } from './treatment/remove-treatment/remove-treatment.component';
+import { ShowAllTreatmentComponent } from './treatment/show-all-treatment/show-all-treatment.component';
+import { AssignForTreatmentComponent } from './treatment/assign-for-treatment/assign-for-treatment.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +24,11 @@ import {ReactiveFormsModule} from "@angular/forms";
     CreatePatientComponent,
     ShowAllPatientComponent,
     DeletePatientComponent,
-    EditPatientComponent
+    EditPatientComponent,
+    CreateTreatmentComponent,
+    RemoveTreatmentComponent,
+    ShowAllTreatmentComponent,
+    AssignForTreatmentComponent
   ],
   imports: [
     BrowserModule,
