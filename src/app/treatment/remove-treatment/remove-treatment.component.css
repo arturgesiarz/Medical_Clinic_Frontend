@@ -1,43 +1,39 @@
-.btnDelete {
-  margin-top: 5px;
-}
-
-.delete-form {
-  margin: 2px;
-}
 
 .delete-treatment-container {
   margin-top: 10px;
-  --post-line-color: #ccc;
   border: 1px solid #ccc;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  overflow: hidden;
-  background-color: rgba(255,255,255,0.8);
-  color: #878A8C;
-  position: relative;
-  border-radius: 4px;
-  padding: 5px;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  color: #333431;
+  padding: 20px;
+}
+
+.delete-patient-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #343434;
+  margin-bottom: 20px;
+}
+
+.delete-form {
+  margin-top: 20px;
 }
 
 .btnDelete {
-  background-color: #0079D3;
-  border-color: #0079D3;
-  color: aliceblue;
-  fill: #0079D3;
-  border: 1px solid;
-  border-radius: 4px;
-  text-align: center;
-  letter-spacing: 1px;
-  text-decoration: none;
-  font-size: 12px;
+  background-color: #333431;
+  border-color: #333431;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
   font-weight: 700;
-  letter-spacing: .5px;
-  line-height: 24px;
   text-transform: uppercase;
-  padding: 3px 16px;
-  opacity: 1;
-  width: 288px;
-  height: 34px;
-  margin-bottom: 0.5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnDelete:hover {
+  background-color: rgb(73, 73, 70);
 }
