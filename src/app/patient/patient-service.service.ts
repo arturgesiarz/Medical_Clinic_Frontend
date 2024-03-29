@@ -21,7 +21,7 @@ export class PatientServiceService {
     return this.http.get<PatientBasicModel>('http://localhost:8080/api/patients/show-user-details/' + patientID);
   }
 
-  deletePatient(patientID: number): Observable<PatientBasicModel> {
-    return this.http.post<PatientBasicModel>('http://localhost:8080/api/patients/delete/' + patientID,"");
+  deletePatient(patientID: number): Observable<any> {
+    return this.http.post('http://localhost:8080/api/patients/delete/' + patientID,"");
   }
 }

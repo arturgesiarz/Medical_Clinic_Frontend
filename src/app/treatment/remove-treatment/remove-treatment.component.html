@@ -1,1 +1,28 @@
-<p>remove-treatment works!</p>
+<div class="container">
+  <div class="row">
+    <hr/>
+    <div class="delete-treatment-container col-md-9">
+      <form class="delete-form" [formGroup]="deleteTreatmentForm" (ngSubmit)="delete()">
+        <div class="form-label">
+          <div class="delete-patient-heading">Delete Treatment</div>
+          <hr/>
+          <select class="form-control" style="margin-top: 10px" [formControlName]="'treatmentID'">
+            <option value="" selected disabled>Select Treatment</option>
+            <option *ngFor="let treatment of treatments" [value]="treatment.treatmentID">{{
+              "Treatment: " + treatment.treatmentName +  ", Price: " + treatment.treatmentPrice
+              }}
+            </option>
+          </select>
+          <span>
+            <div style="margin-top: 5px; display: flex;" class="float-end">
+              <button (click)="delete()" class="btnDelete">Delete</button>
+            </div>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+

@@ -12,18 +12,10 @@ import {throwError} from "rxjs";
 })
 export class DeletePatientComponent implements OnInit{
   patients: Array<PatientBasicModel> = [];
-  patientPayload!: PatientBasicModel;
   deletePatientForm!: FormGroup;
   deletingPatient: boolean = false;
 
   constructor(private router: Router, private patientService: PatientServiceService) {
-    this.patientPayload = {
-      firstName: '',
-      lastName: '',
-      pesel: '',
-      phoneNumber: '',
-      email: ''
-    }
   }
 
   ngOnInit(): void {

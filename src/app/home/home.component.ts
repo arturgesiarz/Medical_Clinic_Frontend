@@ -26,4 +26,8 @@ export class HomeComponent implements OnInit {
   deletePatient() {
     this.router.navigateByUrl('patient/delete');
   }
+
+  deleteTreatment() {
+    this.router.navigateByUrl('treatment/delete');
+  }
 }
