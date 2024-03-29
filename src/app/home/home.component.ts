@@ -19,5 +19,7 @@ export class HomeComponent implements OnInit {
   }
 
 
-
+  goToCreateTreatment() {
+    this.router.navigateByUrl('treatment/add');
+  }
 }
