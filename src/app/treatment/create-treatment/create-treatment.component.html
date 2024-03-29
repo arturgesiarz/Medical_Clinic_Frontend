@@ -1,1 +1,23 @@
-<p>create-treatment works!</p>
+<div class="container">
+  <div class="row">
+    <hr/>
+    <div class="create-treatment-container col-md-9">
+      <form class="create-treatment-form" [formGroup]="createTreatmentForm" (ngSubmit)="create()">
+        <div class="form-label">
+          <div class="register-heading">Create new treatment</div>
+          <hr/>
+          <input type="text" [formControlName]="'treatmentName'" class="form-control" style="margin-top: 5px" placeholder="Treatment name">
+          <input type="number" [formControlName]="'treatmentPrice'" class="form-control" style="margin-top: 5px" placeholder="Treatment price">
+          <span>
+            <div style="margin-top: 5px; display: flex;" class="float-end">
+              <button (click)="create()" class="btnCreate">Create</button>
+            </div>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+
