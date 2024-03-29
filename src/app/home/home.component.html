@@ -4,37 +4,37 @@
       <hr />
       <div class="row justify-content-center py-5 mb-auto">
         <div class="sidebar">
-          <div style="text-align: center; font-size: 1em" class="my-3">
+          <div class="patient-service-title my-3" style="text-align: center; font-size: 1em">
             Patient services.
           </div>
           <div style="text-align: center">
             <button class="btnCreatePost">Display all patients</button>
           </div>
           <div style="text-align: center">
-            <button class="btnCreateSubreddit" (click)="goToRegister()">Add a patient</button>
+            <button class="btnCreatePost" (click)="goToRegister()">Add a patient</button>
           </div>
           <div style="text-align: center">
             <button class="btnCreatePost" (click)="deletePatient()">Remove patient</button>
           </div>
           <div style="text-align: center">
-            <button class="btnCreateSubreddit">Edit patient information</button>
+            <button class="btnCreatePost">Edit patient information</button>
           </div>
         </div>
         <div class="sidebar">
-          <div style="text-align: center; font-size: 1em" class="my-3">
+          <div class="patient-service-title my-3" style="text-align: center; font-size: 1em">
             Handling of treatments
           </div>
           <div style="text-align: center">
             <button class="btnCreateSubreddit" (click)="showAllTreatment()">View all treatments</button>
           </div>
           <div style="text-align: center">
-            <button class="btnCreatePost" (click)="goToCreateTreatment()">Add treatment</button>
+            <button class="btnCreateSubreddit" (click)="goToCreateTreatment()">Add treatment</button>
           </div>
           <div style="text-align: center">
             <button class="btnCreateSubreddit" (click)="deleteTreatment()">Remove treatment</button>
           </div>
           <div style="text-align: center">
-            <button class="btnCreatePost">Sign up for treatment</button>
+            <button class="btnCreateSubreddit">Sign up for treatment</button>
           </div>
         </div>
       </div>
