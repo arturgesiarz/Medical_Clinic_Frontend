@@ -30,4 +30,8 @@ export class HomeComponent implements OnInit {
   deleteTreatment() {
     this.router.navigateByUrl('treatment/delete');
   }
+
+  showAllTreatment() {
+    this.router.navigateByUrl('treatment/show-all');
+  }
 }

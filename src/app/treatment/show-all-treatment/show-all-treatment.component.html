@@ -1,1 +1,17 @@
-<p>show-all-treatment works!</p>
+<div class="treatment-container">
+  <div class="row treatment" *ngFor="let treatment of treatments">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
+      <div class="treatment-title">
+        {{treatment.treatmentName}}
+      </div>
+      <div class="treatment-text">
+        {{treatment.treatmentPrice + " PLN"}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
