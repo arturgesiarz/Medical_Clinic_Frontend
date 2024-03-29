@@ -23,7 +23,7 @@
 .btnCreatePost,
 .btnCreateSubreddit {
   width: 100%;
-  background-color: #3cc537;
+  background-color: #7ba97b;
   color: white;
   border: none;
   text-align: center;
@@ -40,7 +40,7 @@
 }
 
 .btnCreateSubreddit {
-  background-color: #5cbfff;
+  background-color: #547e57;
   color: white;
 }
 
@@ -48,3 +48,4 @@
 .btnCreateSubreddit:hover {
   opacity: 0.9;
 }
+

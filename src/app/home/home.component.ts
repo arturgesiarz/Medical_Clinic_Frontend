@@ -34,4 +34,8 @@ export class HomeComponent implements OnInit {
   showAllTreatment() {
     this.router.navigateByUrl('treatment/show-all');
   }
+
+  assignForTreatment() {
+    this.router.navigateByUrl('treatment/assign');
+  }
 }

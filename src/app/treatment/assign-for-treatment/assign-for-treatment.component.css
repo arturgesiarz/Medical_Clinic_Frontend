@@ -1,0 +1,39 @@
+.assign-treatment-container {
+  margin-top: 10px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f7f7f7;
+  color: #333431;
+  padding: 20px;
+}
+
+.assign-patient-heading {
+  font-family: 'Roboto', sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  color: #343434;
+  margin-bottom: 20px;
+}
+
+.create-treatment-form {
+  margin-top: 20px;
+}
+
+.btnAssign {
+  background-color: #333431;
+  border-color: #333431;
+  color: #fff;
+  border-radius: 5px;
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btnCreate:hover {
+  background-color: rgb(73, 73, 70);
+}
+

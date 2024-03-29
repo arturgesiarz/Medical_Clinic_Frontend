@@ -22,4 +22,7 @@ export class TreatmentService {
     return this.http.post('http://localhost:8080/api/treatment/delete/' + treatmentID,"");
   }
 
+  assign(patientID: number, treatmentID: number): Observable<any> {
+    return this.http.post('http://localhost:8080/api/treatment/assign-patient-to-treatment/' + patientID + '/' + treatmentID,"");
+  }
 }

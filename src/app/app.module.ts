@@ -28,7 +28,7 @@ import { AssignForTreatmentComponent } from './treatment/assign-for-treatment/as
     CreateTreatmentComponent,
     RemoveTreatmentComponent,
     ShowAllTreatmentComponent,
-    AssignForTreatmentComponent
+    AssignForTreatmentComponent,
   ],
   imports: [
     BrowserModule,

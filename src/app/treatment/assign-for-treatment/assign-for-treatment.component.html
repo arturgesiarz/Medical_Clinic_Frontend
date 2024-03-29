@@ -1,1 +1,36 @@
-<p>assign-for-treatment works!</p>
+<div class="container">
+  <div class="row">
+    <hr/>
+    <div class="assign-treatment-container col-md-9">
+      <form class="assign-form" [formGroup]="assignForTreatmentForm" (ngSubmit)="assign()">
+        <div class="form-label">
+          <div class="assign-patient-heading">Assign for treatment</div>
+          <hr/>
+          <select class="form-control" style="margin-top: 10px" [formControlName]="'patientID'">
+            <option value="" selected disabled>Select Patient</option>
+            <option *ngFor="let patient of patients" [value]="patient.patientID">{{
+              "Pesel: " + patient.pesel +  ", Fullname: " + patient.firstName + " " + patient.lastName
+              }}
+            </option>
+          </select>
+          <select class="form-control" style="margin-top: 10px" [formControlName]="'treatmentID'">
+            <option value="" selected disabled>Select Treatment</option>
+            <option *ngFor="let treatment of treatments" [value]="treatment.treatmentID">{{
+              "Treatment: " + treatment.treatmentName +  ", Price: " + treatment.treatmentPrice
+              }}
+            </option>
+          </select>
+          <span>
+            <div style="margin-top: 5px; display: flex;" class="float-end">
+              <button (click)="assign()" class="btnAssign">Assign</button>
+            </div>
+          </span>
+        </div>
+      </form>
+    </div>
+    <div class="col-md-3">
+    </div>
+  </div>
+</div>
+
+

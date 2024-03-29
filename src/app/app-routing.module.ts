@@ -6,6 +6,7 @@ import {CreateTreatmentComponent} from "./treatment/create-treatment/create-trea
 import {DeletePatientComponent} from "./patient/delete-patient/delete-patient.component";
 import {RemoveTreatmentComponent} from "./treatment/remove-treatment/remove-treatment.component";
 import {ShowAllTreatmentComponent} from "./treatment/show-all-treatment/show-all-treatment.component";
+import {AssignForTreatmentComponent} from "./treatment/assign-for-treatment/assign-for-treatment.component";
 
 const routes: Routes = [
   {path: '', component: HomeComponent},
@@ -13,7 +14,8 @@ const routes: Routes = [
   {path: 'treatment/add', component: CreateTreatmentComponent},
   {path: 'patient/delete', component: DeletePatientComponent},
   {path: 'treatment/delete', component: RemoveTreatmentComponent},
-  {path: 'treatment/show-all', component: ShowAllTreatmentComponent}
+  {path: 'treatment/show-all', component: ShowAllTreatmentComponent},
+  {path: 'treatment/assign', component: AssignForTreatmentComponent}
 ];
 
 @NgModule({
