@@ -1,0 +1,36 @@
+.treatment-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.treatment {
+  --post-line-color: #b4eca7;
+  border: 2px solid var(--post-line-color);
+  margin-top: 30px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  background-color: rgba(255,255,255,0.8);
+  color: #0b7019;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.27);
+  padding: 10px;
+  width: calc(50% - 20px);
+  height: calc(50% - 100px);
+  transition: background-color 0.3s;
+}
+
+.treatment:hover {
+  background-color: #f2f2f2;
+}
+
+.treatment-title {
+  font-size: 24px;
+  font-weight: bold;
+  opacity: 1;
+}
+
+.treatment-text {
+  margin-top: 10px;
+}

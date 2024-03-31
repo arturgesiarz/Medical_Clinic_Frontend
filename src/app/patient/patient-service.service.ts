@@ -3,6 +3,8 @@ import {HttpClient} from "@angular/common/http";
 import {RegisterPatientPayload} from "./register-patient.payload";
 import {Observable} from "rxjs";
 import {PatientBasicModel} from "./patient-basic-response";
+import {PatientAddressModel} from "./patient-address-response";
+import {PatientTreatmentHistoryModel} from "./patient-history-response";
 
 @Injectable({
   providedIn: 'root'
@@ -19,6 +21,13 @@ export class PatientServiceService {
 
   getPatientBasicDetails(patientID: number): Observable<PatientBasicModel> {
     return this.http.get<PatientBasicModel>('http://localhost:8080/api/patients/show-user-details/' + patientID);
+  }
+  getPatientAddressDetails(patientID: number): Observable<PatientAddressModel> {
+    return this.http.get<PatientAddressModel>('http://localhost:8080/api/patients/show-address-details/' + patientID);
+  }
+
+  getPatientTreatmentHistoryDetails(patientID: number): Observable<Array<PatientTreatmentHistoryModel>>{
+    return this.http.get<Array<PatientTreatmentHistoryModel>>('http://localhost:8080/api/patients/show-treatment-history-details/' + patientID);
   }
 
   deletePatient(patientID: number): Observable<any> {

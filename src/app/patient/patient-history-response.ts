@@ -1,5 +1,5 @@
 
-export class PatientAddressModel {
+export class PatientTreatmentHistoryModel {
   treatmentHistoryID?: number;
   patientID?: number;
   treatmentID?: number;

@@ -38,4 +38,8 @@ export class HomeComponent implements OnInit {
   assignForTreatment() {
     this.router.navigateByUrl('treatment/assign');
   }
+
+  showAllPatients() {
+    this.router.navigateByUrl('patient/show-all');
+  }
 }

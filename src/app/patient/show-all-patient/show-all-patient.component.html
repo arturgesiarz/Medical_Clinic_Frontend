@@ -1,1 +1,34 @@
-<p>show-all-patient works!</p>
+<div class="treatment-container">
+  <div class="row treatment" *ngFor="let patient of patients">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-11">
+      <div class="treatment-title">
+        Basic information:
+        {{"Fullname: " + patient.firstName + " " + patient.lastName}}
+        {{"Pesel: " + patient.pesel}}
+        {{"Phone number: " + patient.phoneNumber}}
+        {{"E-mail: " + patient.email}}
+      </div>
+      <div class="treatment-title">
+        Address:
+        {{"Country: " + patient.country}}
+        {{"Voivodeship: " + patient.voivodeship}}
+        {{"City: " + patient.city}}
+        {{"Zip code: " + patient.zipCode}}
+        {{"Street: " + patient.street}}
+        {{"Flat number: " + patient.flatNumber}}
+      </div>
+<!--      <div class="treatment-text">-->
+<!--        Treatments:-->
+<!--        <div *ngIf="treatmentsHistory[patient.patientID]">-->
+<!--          <div *ngFor="let treatment of treatmentsHistory[patient.patientID]">-->
+<!--            {{"Treatment name: " + treatment.treatmentName}}-->
+<!--            {{"Treatment date: " + treatment.treatmentDate}}-->
+<!--            {{"It took place? " + treatment.itTookPlace}}-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+    </div>
+  </div>
+</div>
