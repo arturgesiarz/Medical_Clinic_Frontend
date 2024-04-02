@@ -1,27 +1,30 @@
-# MedicalClinicFrontendApp
+# Medical Clinic Fontend
+## What it is?
+This is a front-end written for a medical clinic's patient management system. It allows for convenient:
+adding patients, deleting patients, editing patient information, displaying all patients and much more. For more details on how this system works, follow this 
+[link](https://github.com/arturgesiarz/Medical_Clinic_System)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+## Before starting
+  1.  Make sure you have Node Package Manage installed
+  2.  Make sure you have Angular CLI installed
 
-## Development server
+## How to run it?
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+  1. `git clone https://github.com/arturgesiarz/Medical_Clinic_Frontend`
+  2. `cd Medical_Clinic_Frontend`
+  4. `npm install`
+  5. `ng build`
+  6. `ng serve`
+  7. http://localhost:4200/
 
-## Code scaffolding
+## How to run it with back-end?
+  1. Go to https://github.com/arturgesiarz/Medical_Clinic_System, and install dependencies written in README.md.
+  2. Run back-end
+     
+Now everything should work fine!
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## In which it was written?
+The front-end was written in Angular.
 
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## How does it work?
+-
