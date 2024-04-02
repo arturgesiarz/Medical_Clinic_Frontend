@@ -12,4 +12,6 @@ export class PatientPayload {
   zipCode!: string;
   street!: string;
   flatNumber?: number;
+  showTreatmentsOption: boolean = false;
+  showAddressOption: boolean = false;
 }

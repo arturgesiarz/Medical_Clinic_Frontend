@@ -4,47 +4,83 @@
     </div>
     <div class="col-md-11">
       <div class="treatment-title">
-        <p class="">Basic information:</p>
-        {{"Fullname: " + patient.firstName + " " + patient.lastName}}
+        <p class="treatment-headline">Basic information:</p>
+        <span class="main-content">Fullname:</span>
+        {{patient.firstName + " " + patient.lastName}}
         <br/>
-        {{"Pesel: " + patient.pesel}}
+        <span class="main-content">Pesel:</span>
+        {{patient.pesel}}
         <br/>
-        {{"Phone number: " + patient.phoneNumber}}
+        <span class="main-content">Phone number:</span>
+        {{patient.phoneNumber}}
         <br/>
-        {{"E-mail: " + patient.email}}
+        <span class="main-content">E-mail:</span>
+        {{patient.email}}
       </div>
       <br/>
       <div class="treatment-title">
-        <p class="">Address:</p>
-        {{"Country: " + patient.country}}
-        <br/>
-        {{"Voivodeship: " + patient.voivodeship}}
-        <br/>
-        {{"City: " + patient.city}}
-        <br/>
-        {{"Zip code: " + patient.zipCode}}
-        <br/>
-        {{"Street: " + patient.street}}
-        <br/>
-        <div *ngIf="patient.flatNumber != null">
-          {{"Flat number: " + patient.flatNumber}}
+        <p class="treatment-headline">Address:</p>
+        <div *ngIf="patient.showAddressOption">
+          <span class="main-content">Country:</span>
+          {{patient.country}}
+          <br/>
+          <span class="main-content">Voivodeship:</span>
+          {{"Voivodeship: " + patient.voivodeship}}
+          <br/>
+          <span class="main-content">City:</span>
+          {{patient.city}}
+          <br/>
+          <span class="main-content">Zip code:</span>
+          {{patient.zipCode}}
+          <br/>
+          <span class="main-content">Street:</span>
+          {{patient.street}}
+          <br/>
+          <div *ngIf="patient.flatNumber != null">
+            <span class="main-content">Flat number:</span>
+            {{patient.flatNumber}}
+          </div>
+          <br/>
+          <button (click)="hideAddress(patient.patientID!)" class="btnHide">
+            <fa-icon [icon]="faHide"></fa-icon>
+          </button>
         </div>
-
+        <div *ngIf="!patient.showAddressOption">
+          <button (click)="showAddress(patient.patientID!)" class="btnHide">
+            <fa-icon [icon]="faShow"></fa-icon>
+          </button>
+        </div>
       </div>
       <br/>
       <div class="treatment-title">
-        <p class="">Treatments:</p>
-<!--        <div *ngIf="treatmentsHistory[patient.patientID]">-->
-<!--          <div *ngFor="let treatment of treatmentsHistory[patient.patientID]">-->
-<!--            {{"Treatment name: " + treatment.treatmentName}}-->
-<!--            <br/>-->
-<!--            {{"Treatment date: " + treatment.treatmentDate}}-->
-<!--            <br/>-->
-<!--            {{"It took place? " + treatment.itTookPlace}}-->
-<!--            <br/>-->
-<!--          </div>-->
-<!--        </div>-->
-        <br/>
+        <div *ngIf="hasTreatments(patient.patientID!)">
+          <p class="treatment-headline">Treatments:</p>
+          <div *ngIf="patient.showTreatmentsOption">
+            <div *ngIf="treatmentsHistory.get(patient.patientID!)">
+              <div *ngFor="let treatment of treatmentsHistory.get(patient.patientID!)">
+                <span class="main-content">Treatment name:</span>
+                {{(treatment.treatment && treatment.treatment.treatmentName)}}
+                <br/>
+                <span class="main-content">Treatment date:</span>
+                {{treatment.treatmentDate}}
+                <br/>
+                <span class="main-content">It took place?</span>
+                {{treatment.itTookPlace}}
+                <br/>
+                <br/>
+              </div>
+            </div>
+            <button (click)="hideTreatments(patient.patientID!)" class="btnHide">
+              <fa-icon [icon]="faHide"></fa-icon>
+            </button>
+          </div>
+          <div *ngIf="!patient.showTreatmentsOption">
+            <button (click)="showTreatments(patient.patientID!)" class="btnHide">
+              <fa-icon [icon]="faShow"></fa-icon>
+            </button>
+          </div>
+          <br/>
+        </div>
       </div>
     </div>
   </div>

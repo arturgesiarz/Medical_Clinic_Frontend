@@ -15,6 +15,7 @@ import { CreateTreatmentComponent } from './treatment/create-treatment/create-tr
 import { RemoveTreatmentComponent } from './treatment/remove-treatment/remove-treatment.component';
 import { ShowAllTreatmentComponent } from './treatment/show-all-treatment/show-all-treatment.component';
 import { AssignForTreatmentComponent } from './treatment/assign-for-treatment/assign-for-treatment.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { AssignForTreatmentComponent } from './treatment/assign-for-treatment/as
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
+    FontAwesomeModule,
   ],
   providers: [
     provideClientHydration()

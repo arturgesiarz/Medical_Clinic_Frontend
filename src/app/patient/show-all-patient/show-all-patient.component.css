@@ -12,7 +12,7 @@
   margin-bottom: 10px;
   overflow: hidden;
   background-color: rgba(255,255,255,0.8);
-  color: #0b7019;
+  color: #3e413e;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.27);
   padding: 10px;
@@ -26,11 +26,39 @@
 }
 
 .treatment-title {
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 27px;
   opacity: 1;
 }
 
 .treatment-text {
   margin-top: 10px;
+}
+
+.treatment-headline {
+  color: #1c1c1c;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.main-content {
+  font-weight: bold;
+}
+
+.btnHide {
+  background-color: #258f28; /* Kolor tła */
+  border: none; /* Brak obramowania */
+  color: white; /* Kolor tekstu */
+  padding: 8px 18px; /* Wielkość paddingu */
+  text-align: center; /* Wyśrodkowanie tekstu */
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px; /* Rozmiar tekstu */
+  margin: 4px 2px; /* Margines */
+  cursor: pointer; /* Kursor */
+  border-radius: 8px; /* Zaokrąglenie rogów */
+}
+
+/* Stylowanie przycisku po najechaniu myszką */
+.btnHide:hover {
+  background-color: #45a049; /* Kolor tła po najechaniu myszką */
 }
