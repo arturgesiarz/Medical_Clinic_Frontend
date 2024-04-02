@@ -26,5 +26,12 @@ Now everything should work fine!
 ## In which it was written?
 The front-end was written in Angular.
 
-## How does it work?
--
+## How does it work? - (example screenshots)
+## Menu
+![](https://github.com/arturgesiarz/Medical_Clinic_Frontend/blob/origin/work/home.png)
+
+## Adding patient
+![](https://github.com/arturgesiarz/Medical_Clinic_Frontend/blob/origin/work/register.png)
+
+## Display all patients
+![](https://github.com/arturgesiarz/Medical_Clinic_Frontend/blob/origin/work/patient_info.png)
