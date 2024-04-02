@@ -8,6 +8,7 @@ import {throwError} from "rxjs";
 import {PatientBasicModel} from "../patient-basic-response";
 import {AddressService} from "../address.service";
 import {PatientAddressModel} from "../patient-address-response";
+import {log} from "util";
 
 @Component({
   selector: 'app-show-all-patient',
@@ -33,10 +34,16 @@ export class ShowAllPatientComponent implements OnInit {
 
     this.patientsBasic.forEach(patientBasic => {
       let patientPayload = new PatientPayload()
-      let patientBasicAddress!: PatientAddressModel;
+      let patientBasicAddress: PatientAddressModel = new PatientAddressModel();
 
       this.patientService.getPatientAddressDetails(patientBasic.patientID!).subscribe(data => {
         patientBasicAddress = data
+        patientPayload.zipCode = patientBasicAddress.zipCode;
+        patientPayload.street = patientBasicAddress.street;
+        patientPayload.flatNumber = patientBasicAddress.flatNumber;
+        patientPayload.country = patientBasicAddress.country?.country!;
+        patientPayload.city = patientBasicAddress.city?.city!;
+        patientPayload.voivodeship = patientBasicAddress.voivodeship?.voivodeship!;
       })
 
       patientPayload.patientID  = patientBasic.patientID;
@@ -45,22 +52,6 @@ export class ShowAllPatientComponent implements OnInit {
       patientPayload.pesel = patientBasic.pesel;
       patientPayload.phoneNumber = patientBasic.phoneNumber;
       patientPayload.email = patientBasic.email;
-
-      this.addressService.getCountry(patientBasicAddress.countryID!).subscribe(data => {
-        patientPayload.country = data.country;
-      })
-
-      this.addressService.getCity(patientBasicAddress.cityID!).subscribe(data => {
-        patientPayload.city = data.city;
-      })
-
-      this.addressService.getVoivodeship(patientBasicAddress.voivodeshipID!).subscribe(data => {
-        patientPayload.voivodeship = data.voivodeship;
-      })
-
-      patientPayload.zipCode = patientBasicAddress.zipCode;
-      patientPayload.street = patientBasicAddress.street;
-      patientPayload.flatNumber = patientBasicAddress.flatNumber;
 
       this.patients.push(patientPayload)
     });

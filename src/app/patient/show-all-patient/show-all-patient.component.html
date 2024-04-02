@@ -4,31 +4,48 @@
     </div>
     <div class="col-md-11">
       <div class="treatment-title">
-        Basic information:
+        <p class="">Basic information:</p>
         {{"Fullname: " + patient.firstName + " " + patient.lastName}}
+        <br/>
         {{"Pesel: " + patient.pesel}}
+        <br/>
         {{"Phone number: " + patient.phoneNumber}}
+        <br/>
         {{"E-mail: " + patient.email}}
       </div>
+      <br/>
       <div class="treatment-title">
-        Address:
+        <p class="">Address:</p>
         {{"Country: " + patient.country}}
+        <br/>
         {{"Voivodeship: " + patient.voivodeship}}
+        <br/>
         {{"City: " + patient.city}}
+        <br/>
         {{"Zip code: " + patient.zipCode}}
+        <br/>
         {{"Street: " + patient.street}}
-        {{"Flat number: " + patient.flatNumber}}
+        <br/>
+        <div *ngIf="patient.flatNumber != null">
+          {{"Flat number: " + patient.flatNumber}}
+        </div>
+
       </div>
-<!--      <div class="treatment-text">-->
-<!--        Treatments:-->
+      <br/>
+      <div class="treatment-title">
+        <p class="">Treatments:</p>
 <!--        <div *ngIf="treatmentsHistory[patient.patientID]">-->
 <!--          <div *ngFor="let treatment of treatmentsHistory[patient.patientID]">-->
 <!--            {{"Treatment name: " + treatment.treatmentName}}-->
+<!--            <br/>-->
 <!--            {{"Treatment date: " + treatment.treatmentDate}}-->
+<!--            <br/>-->
 <!--            {{"It took place? " + treatment.itTookPlace}}-->
+<!--            <br/>-->
 <!--          </div>-->
 <!--        </div>-->
-<!--      </div>-->
+        <br/>
+      </div>
     </div>
   </div>
 </div>
