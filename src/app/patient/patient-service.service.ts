@@ -33,4 +33,8 @@ export class PatientServiceService {
   deletePatient(patientID: number): Observable<any> {
     return this.http.post('http://localhost:8080/api/patients/delete/' + patientID,"");
   }
+
+  editPatient(patientID: number, editPayLoad: RegisterPatientPayload): Observable<any> {
+    return this.http.post('http://localhost:8080/api/patients/edit/' + patientID,editPayLoad);
+  }
 }

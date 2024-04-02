@@ -42,4 +42,8 @@ export class HomeComponent implements OnInit {
   showAllPatients() {
     this.router.navigateByUrl('patient/show-all');
   }
+
+  editPatient() {
+    this.router.navigateByUrl('patient/edit');
+  }
 }
